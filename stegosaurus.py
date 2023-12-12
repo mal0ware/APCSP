@@ -64,9 +64,9 @@ def decode_pixel(cover_pixel):
 
 # Returns true if the given value is even, false otherwise
 def is_even(value): #by Marius
-    if value % 2 == 0:
+    if int(value) % 2 == 0:
         return True
-    elif value % 2 == 1:
+    elif int(value) % 2 == 1:
         return False
 
 #################################################################

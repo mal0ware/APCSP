@@ -63,10 +63,11 @@ def decode_pixel(cover_pixel):
 #=========HELPER FUNCTIONS==========#
 
 # Returns true if the given value is even, false otherwise
-def is_even(value):
-    # Implement this function
-    # return a temporary value.  Change this!!
-    return False
+def is_even(value): #by Marius
+    if value % 2 == 0:
+        return True
+    elif value % 2 == 1:
+        return False
 
 #################################################################
 #

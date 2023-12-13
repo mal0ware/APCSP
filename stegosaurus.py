@@ -234,4 +234,3 @@ def run_encryption():
 # Wait for images to load before encrypting and decrypting
 print("Encrypting ............")
 timer.set_timeout(run_encryption, IMAGE_LOAD_WAIT_TIME)
-

@@ -56,8 +56,8 @@ def encode_pixel(cover_pixel, secret_pixel):
 # Returns a tuple of RGB values for the decoded pixel
 #################################################################
 def decode_pixel(cover_pixel):
-    # Implement this function
-    # return a temporary value.  Change this!!
+    #cover pixel, list
+    
     return (0, 0, 0)
 
 #=========HELPER FUNCTIONS==========#
@@ -77,24 +77,31 @@ def is_even(value): #by Marius
 # Returns either a 0 or a 1
 #
 #################################################################
-def get_lowest_bit(value):
+def get_lowest_bit(value): #Louie and Matt
     if is_even(value):
         lowBit = 0
         return lowBit
-    elif !is_even(value): #will this work?
+    elif not is_even(value): #will this work?
         lowBit = 1
         return lowBit
-
+    else:
+        print("error in get_lowest_bit")
 #################################################################
 # 
 # Given a number, return a new number with the same underlying bits
 # except the lowest bit is set to the given bit_value.
 #
 #################################################################
-def set_lowest_bit(value, bit_value):
-    bit_value
-    # Implement this function
-    pass
+def set_lowest_bit(value, bit_value): #marius experimental
+    if bit_value == 0 and not is_even(value):
+        value += 1
+    elif bit_value == 1 and is_even(value):
+        value += 1
+    elif bit_value == 0 and is_even(value):
+        break
+    elif bit_value == 1 and not is_even(value):
+        break
+
 
 
 """

@@ -77,10 +77,11 @@ def is_even(value): #by Marius
 #
 #################################################################
 def get_lowest_bit(value):
-    # Implement this function
-    # return a temporary value.  Change this!!
-    return 0
-
+    if value <= 128 :
+        bit_value = 0
+    else:
+        bit_value = 1
+    return bit_value
 
 #################################################################
 # 
@@ -89,6 +90,7 @@ def get_lowest_bit(value):
 #
 #################################################################
 def set_lowest_bit(value, bit_value):
+    bit_value
     # Implement this function
     pass
 

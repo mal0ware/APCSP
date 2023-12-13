@@ -71,17 +71,19 @@ def is_even(value): #by Marius
 
 #################################################################
 #
+
 # Given a number, return the lowest bit in the binary representation
 # of the number.
 # Returns either a 0 or a 1
 #
 #################################################################
 def get_lowest_bit(value):
-    if value <= 128 :
-        bit_value = 0
-    else:
-        bit_value = 1
-    return bit_value
+    if is_even(value):
+        lowBit = 0
+        return lowBit
+    elif !is_even(value): #will this work?
+        lowBit = 1
+        return lowBit
 
 #################################################################
 # 

@@ -79,7 +79,7 @@ def is_even(value): #by Marius
 def get_lowest_bit(value):
     if value <= 128 :
         bit_value = 0
-    elif:
+    else:
         bit_value = 1
     return bit_value
 

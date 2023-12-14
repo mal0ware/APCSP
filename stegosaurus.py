@@ -43,6 +43,7 @@ set_size(400, 480)
 #
 #################################################################
 def encode_pixel(cover_pixel, secret_pixel):
+    '''
     cover_pixel.pop()
     x = secret_pixel[-1]
     cover_pixel.append(x)
@@ -50,6 +51,30 @@ def encode_pixel(cover_pixel, secret_pixel):
     # Implement this function
     # return a temporary value.  Change this!!
     return cover_pixel
+'''
+
+# Implement this function
+# return a temporary value.  Change this!!
+    pixelValue = [0,0,0]
+    for i in range(3):
+        if secret_pixel[i] >= COLOR_THRESHOLD:
+            lowBit = get_lowest_bit(cover_pixel[i]) 
+            if is_even(lowBit) == True:
+                newPixel = set_lowest_bit(cover_pixel[i],1)
+                pixelValue.append(newPixel)
+            elif is_even(lowBit) == False:
+                newPixel = set_lowest_bit(cover_pixel[i],0)
+                pixelValue.append(newPixel)
+        if secret_pixel[i] < COLOR_THRESHOLD:
+            lowBit = get_lowest_bit(cover_pixel[i]) 
+            if is_even(lowBit) == True:
+                newPixel = set_lowest_bit(cover_pixel[i],0)
+                pixelValue.append(newPixel)
+            elif is_even(lowBit) == False:
+                newPixel = set_lowest_bit(cover_pixel[i],-1)
+                pixelValue.append(newPixel)
+    return pixelValue
+
 
 #################################################################
 # Extracts the RGB values for a secret pixel from the low bits
@@ -61,7 +86,13 @@ def encode_pixel(cover_pixel, secret_pixel):
 #################################################################
 def decode_pixel(cover_pixel):
     #cover pixel, list
-    return (0, 0, 0)
+    redBit = get_lowest_bit(cover_pixel[RED])
+    newRedBit = redBit * 255
+    greenBit = get_lowest_bit(cover_pixel[GREEN]) 
+    newGreenBit = greenBit * 255
+    blueBit = get_lowest_bit(cover_pixel[BLUE]) 
+    newBlueBit = blueBit * 255
+    return (newRedBit, newGreenBit, newBlueBit)
 
 #=========HELPER FUNCTIONS==========#
 
@@ -96,14 +127,10 @@ def get_lowest_bit(value):
 #
 #################################################################
 def set_lowest_bit(value, bit_value): #sussy
-    if bit_value == 0 and not is_even(value):
-        value += 1
-    elif bit_value == 1 and is_even(value):
-        value += 1
-    elif bit_value == 0 and is_even(value):
-        break
-    elif bit_value == 1 and not is_even(value):
-        break
+    if is_even(value) == True:
+        return 0
+    elif is_even(value) == False:
+        return 1
 
 
 

@@ -61,18 +61,18 @@ def encode_pixel(cover_pixel, secret_pixel):
             lowBit = get_lowest_bit(cover_pixel[i]) 
             if is_even(lowBit) == True:
                 newPixel = set_lowest_bit(cover_pixel[i],1)
-                pixelValue.append(newPixel)
+                pixelValue[i] = newPixel
             elif is_even(lowBit) == False:
                 newPixel = set_lowest_bit(cover_pixel[i],0)
-                pixelValue.append(newPixel)
+                pixelValue[i] = newPixel
         if secret_pixel[i] < COLOR_THRESHOLD:
             lowBit = get_lowest_bit(cover_pixel[i]) 
             if is_even(lowBit) == True:
                 newPixel = set_lowest_bit(cover_pixel[i],0)
-                pixelValue.append(newPixel)
+                pixelValue[i] = newPixel
             elif is_even(lowBit) == False:
                 newPixel = set_lowest_bit(cover_pixel[i],-1)
-                pixelValue.append(newPixel)
+                pixelValue[i] = newPixel
     return pixelValue
 
 
@@ -112,14 +112,10 @@ def is_even(value):
 #
 #################################################################
 def get_lowest_bit(value):
-    if is_even(value):
-        lowBit = 0
-        return lowBit
-    elif not is_even(value):
-        lowBit = 1
-        return lowBit
-    else:
-        print("error in get_lowest_bit")
+    if is_even(value) == True:
+        return 0
+    elif is_even(value) == False:
+        return 1
 #################################################################
 # 
 # Given a number, return a new number with the same underlying bits
@@ -127,11 +123,8 @@ def get_lowest_bit(value):
 #
 #################################################################
 def set_lowest_bit(value, bit_value): #sussy
-    if is_even(value) == True:
-        return 0
-    elif is_even(value) == False:
-        return 1
-
+    newValue = value + bit_value
+    return newValue
 
 
 """

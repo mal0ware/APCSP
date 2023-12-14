@@ -44,7 +44,7 @@ set_size(400, 480)
 #################################################################
 def encode_pixel(cover_pixel, secret_pixel):
     cover_pixel.pop()
-    x = secret_pixel.pop()
+    x = secret_pixel[-1]
     cover_pixel.append(x)
     tuple(cover_pixel)
     # Implement this function

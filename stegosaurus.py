@@ -43,9 +43,13 @@ set_size(400, 480)
 #
 #################################################################
 def encode_pixel(cover_pixel, secret_pixel):
+    cover_pixel.pop()
+    x = secret_pixel.pop()
+    cover_pixel.append(x)
+    tuple(cover_pixel)
     # Implement this function
     # return a temporary value.  Change this!!
-    return (0, 0, 0)
+    return cover_pixel
 
 #################################################################
 # Extracts the RGB values for a secret pixel from the low bits
@@ -57,7 +61,6 @@ def encode_pixel(cover_pixel, secret_pixel):
 #################################################################
 def decode_pixel(cover_pixel):
     #cover pixel, list
-    
     return (0, 0, 0)
 
 #=========HELPER FUNCTIONS==========#

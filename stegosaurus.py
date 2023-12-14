@@ -42,9 +42,7 @@ set_size(400, 480)
 # Returns the modified cover pixel
 #
 #################################################################
-def encode_pixel(cover_pixel, secret_pixel): #Matt and Marius
-# Implement this function
-# return a temporary value.  Change this!!
+def encode_pixel(cover_pixel, secret_pixel): #Matt, revised by Marius
     pixelValue = [0,0,0]
     for i in range(3):
         if secret_pixel[i] >= COLOR_THRESHOLD:
@@ -55,7 +53,7 @@ def encode_pixel(cover_pixel, secret_pixel): #Matt and Marius
             elif is_even(lowBit) == False:
                 newPixel = set_lowest_bit(cover_pixel[i],0)
                 pixelValue[i] = newPixel
-        if secret_pixel[i] < COLOR_THRESHOLD:
+        elif secret_pixel[i] < COLOR_THRESHOLD:
             lowBit = get_lowest_bit(cover_pixel[i]) 
             if is_even(lowBit) == True:
                 newPixel = set_lowest_bit(cover_pixel[i],0)
@@ -74,15 +72,13 @@ def encode_pixel(cover_pixel, secret_pixel): #Matt and Marius
 # 
 # Returns a tuple of RGB values for the decoded pixel
 #################################################################
-def decode_pixel(cover_pixel): #louis
-    #cover pixel, list
-    redBit = get_lowest_bit(cover_pixel[RED])
-    newRedBit = redBit * 255
-    greenBit = get_lowest_bit(cover_pixel[GREEN]) 
-    newGreenBit = greenBit * 255
-    blueBit = get_lowest_bit(cover_pixel[BLUE]) 
-    newBlueBit = blueBit * 255
-    return (newRedBit, newGreenBit, newBlueBit)
+def decode_pixel(cover_pixel): #Louis, revised by Marius
+    newBitList = []
+    for i in range(3):
+        orgBit = get_lowest_bit(cover_pixel[i])
+        newBit = orgBit * 255
+        newBitList.append(newBit)
+    return newBitList
 
 #=========HELPER FUNCTIONS==========#
 
@@ -101,7 +97,7 @@ def is_even(value): #Marius
 # Returns either a 0 or a 1
 #
 #################################################################
-def get_lowest_bit(value): #Matt and Marius
+def get_lowest_bit(value): #Marius, revised by Matt
     if is_even(value) == True:
         return 0
     elif is_even(value) == False:

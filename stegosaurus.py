@@ -66,7 +66,7 @@ def decode_pixel(cover_pixel):
 #=========HELPER FUNCTIONS==========#
 
 # Returns true if the given value is even, false otherwise
-def is_even(value): #by Marius
+def is_even(value):
     if int(value) % 2 == 0:
         return True
     elif int(value) % 2 == 1:
@@ -80,11 +80,11 @@ def is_even(value): #by Marius
 # Returns either a 0 or a 1
 #
 #################################################################
-def get_lowest_bit(value): #Louie and Matt
+def get_lowest_bit(value):
     if is_even(value):
         lowBit = 0
         return lowBit
-    elif not is_even(value): #will this work?
+    elif not is_even(value):
         lowBit = 1
         return lowBit
     else:
@@ -95,7 +95,7 @@ def get_lowest_bit(value): #Louie and Matt
 # except the lowest bit is set to the given bit_value.
 #
 #################################################################
-def set_lowest_bit(value, bit_value): #marius experimental
+def set_lowest_bit(value, bit_value): #sussy
     if bit_value == 0 and not is_even(value):
         value += 1
     elif bit_value == 1 and is_even(value):

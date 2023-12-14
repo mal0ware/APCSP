@@ -42,7 +42,7 @@ set_size(400, 480)
 # Returns the modified cover pixel
 #
 #################################################################
-def encode_pixel(cover_pixel, secret_pixel):
+def encode_pixel(cover_pixel, secret_pixel): #Matt and Marius
 # Implement this function
 # return a temporary value.  Change this!!
     pixelValue = [0,0,0]
@@ -74,7 +74,7 @@ def encode_pixel(cover_pixel, secret_pixel):
 # 
 # Returns a tuple of RGB values for the decoded pixel
 #################################################################
-def decode_pixel(cover_pixel):
+def decode_pixel(cover_pixel): #louis
     #cover pixel, list
     redBit = get_lowest_bit(cover_pixel[RED])
     newRedBit = redBit * 255
@@ -87,7 +87,7 @@ def decode_pixel(cover_pixel):
 #=========HELPER FUNCTIONS==========#
 
 # Returns true if the given value is even, false otherwise
-def is_even(value):
+def is_even(value): #Marius
     if int(value) % 2 == 0:
         return True
     elif int(value) % 2 == 1:
@@ -101,7 +101,7 @@ def is_even(value):
 # Returns either a 0 or a 1
 #
 #################################################################
-def get_lowest_bit(value):
+def get_lowest_bit(value): #Matt and Marius
     if is_even(value) == True:
         return 0
     elif is_even(value) == False:
@@ -112,7 +112,7 @@ def get_lowest_bit(value):
 # except the lowest bit is set to the given bit_value.
 #
 #################################################################
-def set_lowest_bit(value, bit_value): #sussy
+def set_lowest_bit(value, bit_value): #Matt
     newValue = value + bit_value
     return newValue
 

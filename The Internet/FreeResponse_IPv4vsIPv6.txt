@@ -1,0 +1,1 @@
+so IPv4 is cool and all, but we need more options because the world is getting bigger and there are more devices. IPv6 simply increases the number of possible numbers, through more bits, so that it should be good for the forseeable future. It is scalable of course, so there can be an IPv8 if necessary.

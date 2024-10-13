@@ -1,0 +1,4 @@
+www.example.com
+/homepage.html
+The request gets sent on a path to whatever server the domain dictates. A server is listening for the request.
+The request is asking for the webpage to be displayed. The browser is expecting a html file to be recieved.

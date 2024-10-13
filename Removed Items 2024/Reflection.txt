@@ -1,0 +1,14 @@
+1. Python was used and the program was a 4 panel story board
+
+2.first we planned out what was going to happen on each panel. 
+then we made some more specific steps as to how we were going to accomplish that.
+finally, we put it into work changing things as we went along for the specific details.
+
+3. the output of our program is what was expected, a 4 panel story about a man named keith that lost his dog and found it again.
+
+4. One student created function was the text1() function, which was for the initial text on the first panel.
+This used sequencing when it gets called, being before line 2 and after the background is added.
+
+5. So text1() function is created as the very first line of text in the story, being on the first panel and the first one being added.
+this is accomplished by def text1(): and openingLine = Text("On a bright sunny day,") being the value within it. Other changes are made to the font size and color.
+Then the function is called in the scene before the 2nd line and after the background is printed.

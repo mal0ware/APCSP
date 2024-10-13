@@ -1,0 +1,47 @@
+def stick(x of stick, y of stick,varz):
+    make body
+    make head
+    make arms
+    make legs
+    if varz == 1
+        set arms in the air
+    if varz == 2
+        set arms in down position
+    
+define scene one():
+    set background
+    add stickfigure
+    add dog jpeg
+define scene two():
+    set background
+    add stick figure
+    add text
+    add dog a little further right
+define scene three():
+    add background
+    add dog
+    add text "5 hours later"
+define scene four():
+    add background
+    add dog
+    add text "found you"
+    
+#do not touch these codes
+scene_counter = 0
+def draw_next_screen(x, y):
+    global scene_counter
+    scene_counter += 1
+
+    if scene_counter == 1:
+        draw_scene1()
+    elif scene_counter == 2:
+        draw_scene2()
+    elif scene_counter == 3:
+        draw_scene3()
+    else:
+        draw_scene4()
+
+welcome = Text("Click to Begin!")
+welcome.set_position(get_width() / 2 - welcome.get_width() / 2, get_height() / 2)
+add(welcome)
+add_mouse_click_handler(draw_next_screen)

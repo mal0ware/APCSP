@@ -1,0 +1,5 @@
+#Scene one: Man Walks Dog
+#Scene two: Dog runs off, man says Oh No!
+#Scene three: Text says "5 Hours later", dog sits alone.
+#Scene four: Man finds dog, Text says "found you!"
+Credits to matthew, louis, me.

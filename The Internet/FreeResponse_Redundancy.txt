@@ -1,0 +1,1 @@
+so basically, being redundant means that some of the routers are not needed and the system will have a lot of options in terms of pathways between two points. This makes the system fault tolerant, and actually improves performance.

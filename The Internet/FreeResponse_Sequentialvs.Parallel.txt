@@ -1,0 +1,3 @@
+a sequential system is a computing system with one processor which handles things in an order, one at a time. It is simple and easy to pinpoint where the problems are, however it is slow. 
+A parallel system will have more than one processor running at a time in parallel, using these things called cores. Cores enable the unit to process more than one thing at a time, greatly increasing speed. It is usually faster than a sequential system.
+A distributed system is the most spread out, where processes can be handled in different places such as the memory and stuff. Distributed systems are the most expernsive, and are the most fault tolerant.

@@ -1,0 +1,1 @@
+We need IP Addresses to identify individual devices in a system so that information will always reach the intended device, and not accidentally be sent to the wrong device.

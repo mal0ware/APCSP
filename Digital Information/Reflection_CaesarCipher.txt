@@ -1,0 +1,4 @@
+1. people wont immediately know what your message says
+2. its easy to decipher
+3. symmetric, it requires the sender and reciever to know how many shifts before hand
+4. 26

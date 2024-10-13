@@ -1,0 +1,10 @@
+# this function should return the number of words that contain "owl"!
+def owl_count(text):
+    words = text.split()
+    count = 0
+    for word in words:
+        if "owl" in word.lower():
+            count+=1
+        else:
+            continue
+    return count

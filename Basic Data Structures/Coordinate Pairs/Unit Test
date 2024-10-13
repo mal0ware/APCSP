@@ -1,0 +1,19 @@
+import math
+
+# Fill in this function to return the distance between the two points!
+def distance(first_point, second_point):
+    #get the x and y coordinates
+    x1, y1 = first_point
+    x2, y2 = second_point
+
+    #square differences
+    xdif = (x1 - x2) ** 2
+    ydif = (y1 - y2) ** 2
+
+    #add the squared differences
+    dif = xdif + ydif
+
+    #square root of the result
+    result = math.sqrt(dif)
+
+    return result

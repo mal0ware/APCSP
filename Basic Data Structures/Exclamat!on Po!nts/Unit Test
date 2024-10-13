@@ -1,0 +1,15 @@
+# update this function so it replaces all lowercase 'i's in `text` with '!'
+def exclamation(text):
+    words = text.split()
+    for i in range(len(words)):
+        word = words[i]
+        modified_word = ""
+        for letter in word:
+            if letter == "i":
+                modified_word += "!"
+            else:
+                modified_word += letter
+        words[i] = modified_word
+
+    text = " ".join(words)
+    return text

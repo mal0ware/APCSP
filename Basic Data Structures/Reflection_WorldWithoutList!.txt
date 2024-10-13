@@ -1,0 +1,3 @@
+data abstraction can be used to manage complexity in a programs code because many types of data can be stored in a list for example, rather than typing out a bunch of variable and keeping track of all of them.
+
+Lists can make a program easier to develop and maintain because lists are mutable, meaning they can be changed on the fly instead of having to go back and change code, potentially breaking something.

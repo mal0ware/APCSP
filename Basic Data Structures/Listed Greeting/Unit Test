@@ -1,0 +1,4 @@
+# fill in this function to greet the user!
+def greeting(user_info):
+    dalist = user_info.split()
+    return "Hello, " + dalist[0] + "! I also enjoy " + dalist[2] + "!"
